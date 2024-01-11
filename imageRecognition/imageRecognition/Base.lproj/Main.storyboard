@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="imageRecognition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mona-lisa" translatesAutoresizingMaskIntoConstraints="NO" id="lkT-uY-Xbe">
+                                <rect key="frame" x="16" y="96" width="358" height="407"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vif-rm-cHN">
+                                <rect key="frame" x="16" y="543" width="358" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="29v-fY-Lfb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxb-TM-vQc">
+                                <rect key="frame" x="133.66666666666666" y="652" width="122.66666666666666" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="mKy-VV-Ew1"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Image Select"/>
+                                <connections>
+                                    <action selector="changeClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JGE-Kx-MeU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lkT-uY-Xbe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0iN-Ea-qZY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sxb-TM-vQc" secondAttribute="bottom" constant="119" id="3Zh-Kn-ebm"/>
+                            <constraint firstItem="Vif-rm-cHN" firstAttribute="centerX" secondItem="sxb-TM-vQc" secondAttribute="centerX" id="7s7-sW-thA"/>
+                            <constraint firstItem="lkT-uY-Xbe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="49" id="Lh0-xW-Mnf"/>
+                            <constraint firstItem="lkT-uY-Xbe" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="bVa-pq-szB"/>
+                            <constraint firstItem="sxb-TM-vQc" firstAttribute="top" secondItem="Vif-rm-cHN" secondAttribute="bottom" constant="67" id="fIZ-rs-SNk"/>
+                            <constraint firstItem="sxb-TM-vQc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="133.66666666666663" id="foD-Eh-eyJ"/>
+                            <constraint firstItem="lkT-uY-Xbe" firstAttribute="leading" secondItem="Vif-rm-cHN" secondAttribute="leading" id="l4m-gt-3Kx"/>
+                            <constraint firstItem="lkT-uY-Xbe" firstAttribute="trailing" secondItem="Vif-rm-cHN" secondAttribute="trailing" id="seh-96-cFX"/>
+                            <constraint firstItem="Vif-rm-cHN" firstAttribute="top" secondItem="lkT-uY-Xbe" secondAttribute="bottom" constant="40" id="sn0-hU-Far"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="lkT-uY-Xbe" id="k4i-Cz-8wB"/>
+                        <outlet property="resultLabel" destination="Vif-rm-cHN" id="u3j-ad-6Py"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mona-lisa" width="512" height="512"/>
+    </resources>
+</document>
